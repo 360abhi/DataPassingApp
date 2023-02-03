@@ -1,0 +1,15 @@
+<div class="flex justify-between  gap-2 px-4 font-mono">
+    <div *ngFor="let card of cards" class="flex w-[325px] gap-3 p-2 border border-amber-200 shadow-xl flex-col">
+    <div class=""><img src={{card.imageurl}} alt="image" class="h-[175px]"></div>
+    <h2>{{card.heading}}</h2>
+    <p>{{card.about}}</p>
+    <button class="bg-gray-900 p-2 text-amber-200 ml-auto">Know more</button>
+    </div>
+</div>
+
+
+<div class="mt-4 mb-2  flex flex-col w-[500px] border border-black p-2 gap-3">
+<label for="name" class="text-xl font-mono">Change Name<input type="text" id="name" name="name" #target autocomplete="off" class="focus::ring-none font-mono focus:outline-none  ml-2 w-[300px] border-black border p-2 h-12"></label>
+<a><button class="btn btn-secondary mx-auto p-x-4 " routerLink="othankyou" (click)="change(target.value)">Do it</button></a>
+</div>
+
