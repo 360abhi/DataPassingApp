@@ -24,5 +24,9 @@ export class CardsComponent {
      this._trialservice.message = target;
      console.log(this._trialservice.message)
     }
+
+    gotoView(target: HTMLInputElement) : void{
+      target.scrollIntoView({behavior: 'smooth'});
+    }
     
 }
