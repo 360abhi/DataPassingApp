@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
 })
 export class ParentComponent {
 
-  productSelected: boolean= false;
+  isSelected: boolean= false;
   product: string =''
   addedToCart:any;
 
   btnClicked(product: string): void {
-    this.productSelected = true;
+    this.isSelected = true;
     this.product = product;
   }
 
-  add() : void {
+  // add() : void {
     
-    this.addedToCart  = this.product;
-  }
+  //   this.addedToCart  = this.product;
+  // }
 }

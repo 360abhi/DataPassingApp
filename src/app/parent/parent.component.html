@@ -37,8 +37,4 @@
     </div>
 </div>
 
-<div class="text-center mt-3 flex flex-col gap-3">
-    <h2 class="text-xl" *ngIf="!productSelected">Please select any Product</h2>
-    <h2 class="text-xl"  *ngIf="productSelected">{{product}} is Selected</h2>
-    <button class="btn-accent btn mx-auto" (click)="add()">Add to Cart</button>
-</div>
+<app-child [isSelected]="isSelected" [product]="product"></app-child>
