@@ -1,0 +1,44 @@
+
+<div *ngIf="addedToCart" class="alert alert-success shadow-lg">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+      <span>Your purchase of {{addedToCart}} has been confirmed!</span>
+    </div>
+    <button class="btn btn-primary">Checkout</button>
+  </div>
+
+<div class="flex justify-around">
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Laptop</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary" (click)="btnClicked('Laptop')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Television</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary" (click)="btnClicked('Television')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Refrigerator</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions justify-end">
+                <button class="btn btn-primary" (click)="btnClicked('Refrigerator')">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="text-center mt-3 flex flex-col gap-3">
+    <h2 class="text-xl" *ngIf="!productSelected">Please select any Product</h2>
+    <h2 class="text-xl"  *ngIf="productSelected">{{product}} is Selected</h2>
+    <button class="btn-accent btn mx-auto" (click)="add()">Add to Cart</button>
+</div>

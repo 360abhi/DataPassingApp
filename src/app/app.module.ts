@@ -9,10 +9,13 @@ import { Route, RouterModule, Routes } from '@angular/router';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { NgcontentxComponent } from './ngcontentx/ngcontentx.component';
 import { TrialService } from './Services/trial.service';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 const appRoutes : Routes = [
   { path : '', component : CardsComponent},
   { path : 'home', component: CardsComponent},
+  { path: 'parent' , component: ParentComponent },
   { path : "**", component: ErrorpageComponent}
 ]
 
@@ -22,7 +25,9 @@ const appRoutes : Routes = [
     NavbarComponent,
     CardsComponent,
     ErrorpageComponent,
-    NgcontentxComponent
+    NgcontentxComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
