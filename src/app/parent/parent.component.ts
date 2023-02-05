@@ -20,4 +20,8 @@ export class ParentComponent {
     
   //   this.addedToCart  = this.product;
   // }
+  onAddedProduct(prodata : any) : void {
+    this.addedToCart = prodata
+  }
+  
 }

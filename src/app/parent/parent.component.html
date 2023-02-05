@@ -37,4 +37,4 @@
     </div>
 </div>
 
-<app-child [isSelected]="isSelected" [product]="product"></app-child>
+<app-child [isSelected]="isSelected" [product]="product" (addedProduct) = "onAddedProduct($event)"></app-child>

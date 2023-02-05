@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,5 +9,10 @@ export class ChildComponent {
 
    @Input() product:any;
    @Input() isSelected: boolean = false;
+   @Output() addedProduct = new EventEmitter<any>();
+
+   addToCart() : void {
+    this.addedProduct.emit(this.product)
+   }
    
 }

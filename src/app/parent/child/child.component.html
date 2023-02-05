@@ -1,5 +1,5 @@
 <div class="text-center mt-3 flex flex-col gap-3">
     <h2 class="text-xl" *ngIf="!isSelected" >Please select any Product</h2>
     <h2 class="text-xl" *ngIf="isSelected">{{product}} is Selected</h2>
-    <button class="btn-accent btn mx-auto">Add to Cart</button>
+    <button (click)="addToCart()" class="btn-accent btn mx-auto">Add to Cart</button>
 </div>
