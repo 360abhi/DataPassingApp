@@ -11,11 +11,13 @@ import { NgcontentxComponent } from './ngcontentx/ngcontentx.component';
 import { TrialService } from './Services/trial.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { LoginComponent } from './login/login.component';
 
 const appRoutes : Routes = [
   { path : '', component : CardsComponent},
   { path : 'home', component: CardsComponent},
   { path: 'parent' , component: ParentComponent },
+  { path: 'login', component:LoginComponent},
   { path : "**", component: ErrorpageComponent}
 ]
 
@@ -27,7 +29,8 @@ const appRoutes : Routes = [
     ErrorpageComponent,
     NgcontentxComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
